@@ -12,27 +12,47 @@
         .reveal h1, .reveal h2, .reveal h3 { text-transform: none; }
         .email-footer { font-size: 0.6em; color: #42affa; margin-top: 2em; }
         .fragment.highlight-current-blue { opacity: 1; }
-        .fragment.highlight-current-blue.current-fragment { color: #42affa; font-weight: bold; }
+        .fragment.highlight-current-blue.current-fragment { color: #42affa; font-weight: bold; transform: scale(1.1); }
+        .metric-box {
+            background: rgba(66, 175, 250, 0.1);
+            border: 2px solid #42affa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            display: inline-block;
+            min-width: 200px;
+        }
+        .metric-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #42affa;
+        }
+        .emphasis-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
     </style>
 </head>
 <body>
     <div class="reveal">
         <div class="slides">
             
-            <!-- Slide 1: Title Slide -->
+            <!-- Slide 1: Title Slide with Animated Elements -->
             <section>
-                <h1>Quarterly Earnings Report</h1>
-                <h3>Q3 2025 Financial Results</h3>
-                <p>Major Financial Institution</p>
-                <p class="email-footer">Prepared by: 24ds3000019@ds.study.iitm.ac.in</p>
+                <h1 class="fragment fade-down">Quarterly Earnings Report</h1>
+                <h3 class="fragment fade-up" data-fragment-index="1">Q3 2025 Financial Results</h3>
+                <p class="fragment zoom-in" data-fragment-index="2">Major Financial Institution</p>
+                <p class="email-footer fragment fade-in" data-fragment-index="3">Prepared by: 24ds3000019@ds.study.iitm.ac.in</p>
                 <aside class="notes">
                     Welcome stakeholders to our Q3 2025 earnings presentation.
+                    Notice the animated entrance - builds excitement and professionalism.
                     Today we'll cover our financial performance, key metrics, and future outlook.
-                    Remember to emphasize the strong revenue growth and improved efficiency ratios.
                 </aside>
             </section>
 
-            <!-- Slide 2: Markdown Slide with Fragments -->
+            <!-- Slide 2: Markdown Slide with Multiple Fragment Types -->
             <section data-markdown>
                 <textarea data-template>
                     ## Executive Summary
@@ -53,42 +73,87 @@
                     1. <!-- .element: class="fragment highlight-current-blue" --> Industry-leading digital platform
                     2. <!-- .element: class="fragment highlight-current-blue" --> Robust risk management framework
                     3. <!-- .element: class="fragment highlight-current-blue" --> Diversified revenue streams
+                    4. <!-- .element: class="fragment highlight-current-blue" --> Best-in-class customer service
                     
                     <p class="email-footer">Contact: 24ds3000019@ds.study.iitm.ac.in</p>
                     
                     Note:
-                    Emphasize our strong market position.
-                    Highlight the digital transformation success.
-                    Mention regulatory compliance achievements.
+                    Each bullet fades in and semi-out - keeps focus on current point.
+                    Competitive advantages highlight one at a time.
+                    Emphasize the digital transformation success.
                 </textarea>
             </section>
 
-            <!-- Slide 3: Financial Formulas -->
+            <!-- Slide 3: Animated Metrics Dashboard -->
             <section>
-                <h2>Key Financial Metrics</h2>
-                <p class="fragment fade-up">Return on Equity (ROE):</p>
-                <p class="fragment fade-up">
-                    $$ ROE = \frac{Net\;Income}{Shareholders'\;Equity} \times 100 $$
-                </p>
-                <p class="fragment fade-up">Our Q3 ROE: <strong>22.7%</strong></p>
+                <h2 class="fragment fade-in-then-out" data-fragment-index="0">Q3 Performance Metrics</h2>
+                <h2 class="fragment fade-in" data-fragment-index="1">Outstanding Results Across All KPIs</h2>
                 
-                <div class="fragment fade-up" style="margin-top: 1.5em;">
-                    <p>Efficiency Ratio:</p>
-                    $$ Efficiency\;Ratio = \frac{Operating\;Expenses}{Revenue} \times 100 $$
-                    <p>Q3 Result: <strong>56.2%</strong> (Industry avg: 62%)</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px;">
+                    <div class="metric-box fragment zoom-in" data-fragment-index="2">
+                        <div>Revenue Growth</div>
+                        <div class="metric-value fragment highlight-red" data-fragment-index="6">+18.5%</div>
+                    </div>
+                    <div class="metric-box fragment zoom-in" data-fragment-index="3">
+                        <div>Net Profit Margin</div>
+                        <div class="metric-value fragment highlight-green" data-fragment-index="6">24.3%</div>
+                    </div>
+                    <div class="metric-box fragment zoom-in" data-fragment-index="4">
+                        <div>Customer Growth</div>
+                        <div class="metric-value fragment highlight-blue" data-fragment-index="6">+32%</div>
+                    </div>
+                    <div class="metric-box fragment zoom-in" data-fragment-index="5">
+                        <div>ROE</div>
+                        <div class="metric-value fragment highlight-current-blue" data-fragment-index="6">22.7%</div>
+                    </div>
                 </div>
+                
+                <p class="fragment grow" data-fragment-index="7" style="margin-top: 30px; color: #42affa;">
+                    🎯 All targets exceeded!
+                </p>
+                
                 <aside class="notes">
-                    ROE of 22.7% exceeds our target of 20%.
-                    Efficiency ratio shows excellent cost management.
-                    We're outperforming industry benchmarks.
+                    Title changes from generic to emphasizing success.
+                    Metrics appear one by one building momentum.
+                    Values highlight to draw attention.
+                    Final message grows to celebrate achievement.
                 </aside>
             </section>
 
-            <!-- Slide 4: Code Sample - Python Analytics -->
+            <!-- Slide 4: Financial Formulas with Step Animations -->
             <section>
-                <h2>Data Analytics Pipeline</h2>
-                <p>Python code for revenue trend analysis:</p>
-                <pre><code class="python" data-trim data-line-numbers="1-2|4-8|10-12">
+                <h2 class="fragment fade-right">Key Financial Metrics</h2>
+                
+                <div class="fragment fade-up" data-fragment-index="1">
+                    <p>Return on Equity (ROE):</p>
+                    <p class="fragment highlight-current-blue" data-fragment-index="2">
+                        $$ ROE = \frac{Net\;Income}{Shareholders'\;Equity} \times 100 $$
+                    </p>
+                    <p class="fragment fade-left" data-fragment-index="3">Our Q3 ROE: <strong style="color: #42affa;">22.7%</strong></p>
+                </div>
+                
+                <div class="fragment fade-up" data-fragment-index="4" style="margin-top: 1.5em;">
+                    <p>Efficiency Ratio:</p>
+                    <p class="fragment highlight-current-blue" data-fragment-index="5">
+                        $$ Efficiency\;Ratio = \frac{Operating\;Expenses}{Revenue} \times 100 $$
+                    </p>
+                    <p class="fragment fade-left" data-fragment-index="6">Q3 Result: <strong style="color: #42affa;">56.2%</strong> <span class="fragment strike" data-fragment-index="7">(Industry avg: 62%)</span></p>
+                    <p class="fragment zoom-in" data-fragment-index="7" style="color: #42affa;">✓ Outperforming industry by 5.8%</p>
+                </div>
+                
+                <aside class="notes">
+                    Formulas appear with progressive reveal.
+                    Each formula highlights when it's being explained.
+                    Results fade in from left for emphasis.
+                    Industry comparison gets strikethrough then shows our advantage.
+                </aside>
+            </section>
+
+            <!-- Slide 5: Code with Line-by-Line Animation -->
+            <section>
+                <h2 class="fragment fade-in-then-semi-out">Data Analytics Pipeline</h2>
+                <p class="fragment current-visible">Python code for revenue trend analysis:</p>
+                <pre class="fragment fade-in"><code class="python" data-trim data-line-numbers="|1-2|4-5|6-7|9-11">
 import pandas as pd
 import numpy as np
 
@@ -96,95 +161,181 @@ import numpy as np
 df = pd.read_csv('revenue_data.csv')
 df['growth_rate'] = df['revenue'].pct_change() * 100
 df['moving_avg'] = df['revenue'].rolling(window=4).mean()
-print(df[['quarter', 'revenue', 'growth_rate']])
 
 # Calculate YoY metrics
 yoy_growth = ((df.iloc[-1]['revenue'] - df.iloc[-5]['revenue']) 
                / df.iloc[-5]['revenue']) * 100
 print(f"YoY Growth: {yoy_growth:.2f}%")
                 </code></pre>
-                <p class="fragment fade-in" style="font-size: 0.8em;">Output: YoY Growth: <strong>18.5%</strong></p>
+                
+                <div class="fragment fade-up" style="margin-top: 20px;">
+                    <div class="fragment highlight-current-green" style="display: inline-block; padding: 10px 20px; background: rgba(66, 175, 250, 0.2); border-radius: 5px;">
+                        <strong>Output:</strong> YoY Growth: <span style="color: #42affa; font-size: 1.3em;">18.5%</span>
+                    </div>
+                </div>
+                
                 <aside class="notes">
-                    This is our automated analytics pipeline.
-                    Runs daily to track revenue trends.
-                    Integrated with our data warehouse.
+                    Title fades then dims to keep focus on code.
+                    Code appears with line-by-line highlighting.
+                    Import statements, data loading, calculations, output - each step highlighted.
+                    Final output box appears and highlights in green.
                 </aside>
             </section>
 
-            <!-- Slide 5: SQL Query Sample -->
+            <!-- Slide 6: SQL with Multiple Animation Types -->
             <section>
-                <h2>Database Query Optimization</h2>
-                <p>Customer segmentation query:</p>
-                <pre><code class="sql" data-trim data-line-numbers="1-3|4-6|7-9">
+                <h2 class="fragment slide-in">Database Query Optimization</h2>
+                <p class="fragment fade-right">Customer segmentation query:</p>
+                <pre class="fragment fade-up"><code class="sql" data-trim data-line-numbers="|1-3|4-6|7-9|10">
 SELECT 
     customer_segment,
     COUNT(*) as total_customers,
     AVG(account_balance) as avg_balance,
-    SUM(transaction_volume) as total_volume
+    SUM(transaction_volume) as total_volume,
+    MAX(last_transaction_date) as recent_activity
 FROM customers
 WHERE registration_date >= '2025-07-01'
 GROUP BY customer_segment
 ORDER BY total_volume DESC;
                 </code></pre>
-                <p class="fragment fade-in" style="font-size: 0.8em; margin-top: 1em;">
-                    Query execution time: <strong>0.23s</strong> (optimized from 4.5s)
-                </p>
-                <p class="email-footer">24ds3000019@ds.study.iitm.ac.in</p>
+                
+                <div style="margin-top: 30px;">
+                    <p class="fragment fade-in-then-semi-out">Performance Metrics:</p>
+                    <div style="display: flex; justify-content: space-around; margin-top: 20px;">
+                        <div class="fragment zoom-in" data-fragment-index="1">
+                            <strong>Before:</strong><br>
+                            <span class="fragment strike" data-fragment-index="3" style="color: #ff6b6b;">4.5s</span>
+                        </div>
+                        <div class="fragment zoom-in" data-fragment-index="2">
+                            <strong>After:</strong><br>
+                            <span class="fragment highlight-current-green" data-fragment-index="3" style="color: #42affa; font-size: 1.5em;">0.23s</span>
+                        </div>
+                        <div class="fragment zoom-in" data-fragment-index="4">
+                            <strong>Improvement:</strong><br>
+                            <span class="fragment grow" style="color: #51cf66; font-size: 1.3em;">95%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="email-footer fragment fade-in">24ds3000019@ds.study.iitm.ac.in</p>
+                
+                <aside class="notes">
+                    Header slides in from right.
+                    Query appears with line-by-line explanation.
+                    Performance comparison shows dramatic improvement.
+                    Old time gets strikethrough, new time highlights in green.
+                    95% improvement grows to emphasize optimization success.
+                </aside>
             </section>
 
-            <!-- Slide 6: Advanced Math - Portfolio Optimization -->
+            <!-- Slide 7: Advanced Math with Stacked Animations -->
             <section>
-                <h2>Portfolio Risk Calculation</h2>
-                <p>Value at Risk (VaR) - 95% confidence level:</p>
-                <p class="fragment fade-up">
-                    $$ VaR_{95} = \mu - 1.645 \times \sigma $$
-                </p>
-                <p class="fragment fade-up" style="font-size: 0.85em;">
-                    Where: $\mu$ = expected return, $\sigma$ = standard deviation
-                </p>
+                <h2 class="fragment fade-down">Portfolio Risk Calculation</h2>
                 
-                <div class="fragment fade-up" style="margin-top: 1.5em;">
-                    <p>Sharpe Ratio for risk-adjusted returns:</p>
-                    $$ S = \frac{R_p - R_f}{\sigma_p} $$
-                    <p style="font-size: 0.85em;">
-                        $R_p$ = portfolio return, $R_f$ = risk-free rate, $\sigma_p$ = portfolio std dev
+                <div class="r-stack" style="margin-top: 40px;">
+                    <div class="fragment fade-in-then-out" data-fragment-index="0">
+                        <p style="font-size: 1.2em;">Value at Risk (VaR) - 95% confidence level:</p>
+                        <p class="fragment highlight-blue" data-fragment-index="1">
+                            $$ VaR_{95} = \mu - 1.645 \times \sigma $$
+                        </p>
+                        <p class="fragment fade-up" data-fragment-index="2" style="font-size: 0.9em;">
+                            Where: $\mu$ = expected return, $\sigma$ = standard deviation
+                        </p>
+                        <p class="fragment zoom-in" data-fragment-index="3" style="color: #42affa; margin-top: 20px;">
+                            Our Portfolio VaR: <strong>$2.3M</strong> (within acceptable limits)
+                        </p>
+                    </div>
+                    
+                    <div class="fragment fade-in" data-fragment-index="4">
+                        <p style="font-size: 1.2em;">Sharpe Ratio for risk-adjusted returns:</p>
+                        <p class="fragment highlight-green" data-fragment-index="5">
+                            $$ S = \frac{R_p - R_f}{\sigma_p} $$
+                        </p>
+                        <p class="fragment fade-up" data-fragment-index="6" style="font-size: 0.85em;">
+                            $R_p$ = portfolio return, $R_f$ = risk-free rate, $\sigma_p$ = portfolio std dev
+                        </p>
+                        <p class="fragment zoom-in" data-fragment-index="7" style="color: #42affa; margin-top: 20px;">
+                            Our Sharpe Ratio: <strong>1.85</strong> (excellent risk-adjusted performance)
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="fragment fade-up emphasis-box" data-fragment-index="8" style="margin-top: 30px;">
+                    <strong>Risk Management Status:</strong> ✓ All metrics within target ranges
+                </div>
+                
+                <aside class="notes">
+                    VaR formula appears first with stacked animation.
+                    Formula highlights in blue, explanation fades up.
+                    Our VaR zooms in to show result.
+                    Then VaR fades out and Sharpe Ratio fades in (r-stack creates smooth transition).
+                    Sharpe formula highlights in green.
+                    Final status box appears with gradient background.
+                </aside>
+            </section>
+
+            <!-- Slide 8: Multi-Stage Fragment Reveal -->
+            <section>
+                <h2 class="fragment fade-in-then-semi-out">Q3 Performance Breakdown</h2>
+                
+                <div style="text-align: left; margin: 0 auto; max-width: 800px;">
+                    <p class="fragment custom fade-right" data-fragment-index="1">
+                        💰 <strong>Revenue:</strong> 
+                        <span class="fragment highlight-blue" data-fragment-index="7">$245M</span>
+                        <span class="fragment fade-left" data-fragment-index="7">(+18.5% YoY)</span>
+                    </p>
+                    <p class="fragment fade-right" data-fragment-index="2">
+                        📊 <strong>Operating Income:</strong> 
+                        <span class="fragment highlight-blue" data-fragment-index="8">$107M</span>
+                        <span class="fragment fade-left" data-fragment-index="8">(+22% YoY)</span>
+                    </p>
+                    <p class="fragment fade-right" data-fragment-index="3">
+                        💵 <strong>Net Income:</strong> 
+                        <span class="fragment highlight-blue" data-fragment-index="9">$59.5M</span>
+                        <span class="fragment fade-left" data-fragment-index="9">(+19% YoY)</span>
+                    </p>
+                    <p class="fragment fade-right" data-fragment-index="4">
+                        👥 <strong>Active Customers:</strong> 
+                        <span class="fragment highlight-green" data-fragment-index="10">5.2M</span>
+                        <span class="fragment fade-left" data-fragment-index="10">(+32% YoY)</span>
+                    </p>
+                    <p class="fragment fade-right" data-fragment-index="5">
+                        📱 <strong>Digital Transactions:</strong> 
+                        <span class="fragment highlight-green" data-fragment-index="11">45M</span>
+                        <span class="fragment fade-left" data-fragment-index="11">(+67% YoY)</span>
+                    </p>
+                    <p class="fragment fade-right" data-fragment-index="6">
+                        ⭐ <strong>Customer Satisfaction:</strong> 
+                        <span class="fragment highlight-current-blue" data-fragment-index="12">94%</span>
+                        <span class="fragment fade-left" data-fragment-index="12">(Industry leading)</span>
                     </p>
                 </div>
-                <aside class="notes">
-                    VaR helps us understand maximum expected loss.
-                    Sharpe ratio of 1.8 indicates strong risk-adjusted performance.
-                    These metrics guide our investment decisions.
-                </aside>
-            </section>
-
-            <!-- Slide 7: Animated Fragment Showcase -->
-            <section>
-                <h2>Q3 Performance Breakdown</h2>
-                <div style="text-align: left; margin: 0 auto; max-width: 800px;">
-                    <p class="fragment fade-right">💰 <strong>Revenue:</strong> $245M (+18.5% YoY)</p>
-                    <p class="fragment fade-right">📊 <strong>Operating Income:</strong> $107M (+22% YoY)</p>
-                    <p class="fragment fade-right">💵 <strong>Net Income:</strong> $59.5M (+19% YoY)</p>
-                    <p class="fragment fade-right">👥 <strong>Active Customers:</strong> 5.2M (+32% YoY)</p>
-                    <p class="fragment fade-right">📱 <strong>Digital Transactions:</strong> 45M (+67% YoY)</p>
+                
+                <div class="fragment fade-up" data-fragment-index="13" style="margin-top: 40px;">
+                    <div class="fragment grow" data-fragment-index="14" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 10px;">
+                        <strong style="font-size: 1.5em; color: white;">🏆 Best Quarter in Company History!</strong>
+                    </div>
                 </div>
-                <p class="fragment grow" style="margin-top: 1.5em; color: #42affa;">
-                    <strong>Best Quarter in Company History!</strong>
-                </p>
+                
                 <aside class="notes">
-                    Reveal each metric progressively to build excitement.
-                    Pause after digital transactions to emphasize digital transformation.
-                    End with strong statement about record performance.
+                    Each metric line appears from right progressively.
+                    First, metric names appear.
+                    Then values highlight in blue/green.
+                    Finally, YoY comparisons fade in from left.
+                    This creates a three-stage reveal for each metric.
+                    Celebration message appears in gradient box and grows.
                 </aside>
             </section>
 
-            <!-- Slide 8: JavaScript Code Sample -->
+            <!-- Slide 9: JavaScript Code with Custom Fragments -->
             <section>
-                <h2>Real-Time Dashboard Code</h2>
-                <p>WebSocket integration for live metrics:</p>
-                <pre><code class="javascript" data-trim data-line-numbers="1-3|5-9|11-15">
+                <h2 class="fragment zoom-in">Real-Time Dashboard Code</h2>
+                <p class="fragment fade-up">WebSocket integration for live metrics:</p>
+                <pre class="fragment slide-in"><code class="javascript" data-trim data-line-numbers="|1-2|4|6-10|12-17">
 const ws = new WebSocket('wss://api.financials.com/stream');
+const metrics = { revenue: 0, transactions: 0, activeUsers: 0 };
 
-ws.onopen = () => console.log('Connected to metrics stream');
+ws.onopen = () => console.log('✓ Connected to metrics stream');
 
 ws.onmessage = (event) => {
     const data = JSON.parse(event.data);
@@ -197,58 +348,103 @@ function updateDashboard(revenue, transactions) {
         `$${(revenue / 1000000).toFixed(1)}M`;
     document.getElementById('txn-count').textContent = 
         transactions.toLocaleString();
+    triggerAnimation();
 }
                 </code></pre>
-                <p class="email-footer">24ds3000019@ds.study.iitm.ac.in</p>
-            </section>
-
-            <!-- Slide 9: Future Outlook -->
-            <section>
-                <h2>Q4 2025 Outlook</h2>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2em; margin-top: 2em;">
-                    <div class="fragment zoom-in">
-                        <h3 style="color: #42affa;">Targets</h3>
-                        <ul style="font-size: 0.8em;">
-                            <li>Revenue: $260M</li>
-                            <li>ROE: 23.5%</li>
-                            <li>Customer Base: 6M</li>
-                        </ul>
+                
+                <div style="margin-top: 30px;">
+                    <div class="fragment fade-in" data-fragment-index="1">
+                        <strong>Live Demo Status:</strong>
                     </div>
-                    <div class="fragment zoom-in">
-                        <h3 style="color: #42affa;">Initiatives</h3>
-                        <ul style="font-size: 0.8em;">
-                            <li>AI-powered lending</li>
-                            <li>Blockchain settlements</li>
-                            <li>Mobile app v3.0</li>
-                        </ul>
+                    <div class="fragment zoom-in" data-fragment-index="2" style="margin-top: 10px;">
+                        <span class="fragment highlight-current-green" data-fragment-index="3">✓ Streaming</span>
+                        <span class="fragment fade-in" data-fragment-index="4">| Update Frequency: <strong>100ms</strong></span>
+                        <span class="fragment fade-in" data-fragment-index="5">| Latency: <strong>&lt;50ms</strong></span>
                     </div>
                 </div>
-                <p class="fragment fade-up" style="margin-top: 2em;">
-                    Expected annual growth: <strong style="color: #42affa;">20-25%</strong>
-                </p>
+                
+                <p class="email-footer fragment fade-in">24ds3000019@ds.study.iitm.ac.in</p>
+            </section>
+
+            <!-- Slide 10: Future Outlook with Grid Animations -->
+            <section>
+                <h2 class="fragment fade-down">Q4 2025 Outlook & Strategic Initiatives</h2>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2em; margin-top: 2em;">
+                    <div class="fragment zoom-in" data-fragment-index="1">
+                        <div style="background: rgba(66, 175, 250, 0.1); padding: 20px; border-radius: 10px; border: 2px solid #42affa;">
+                            <h3 style="color: #42affa;" class="fragment highlight-current-blue" data-fragment-index="5">Targets</h3>
+                            <ul style="font-size: 0.85em; text-align: left;">
+                                <li class="fragment fade-right" data-fragment-index="6">Revenue: $260M (+6%)</li>
+                                <li class="fragment fade-right" data-fragment-index="7">ROE: 23.5%</li>
+                                <li class="fragment fade-right" data-fragment-index="8">Customer Base: 6M (+15%)</li>
+                                <li class="fragment fade-right" data-fragment-index="9">NPS Score: 75+</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="fragment zoom-in" data-fragment-index="2">
+                        <div style="background: rgba(102, 126, 234, 0.1); padding: 20px; border-radius: 10px; border: 2px solid #667eea;">
+                            <h3 style="color: #667eea;" class="fragment highlight-current-blue" data-fragment-index="10">Initiatives</h3>
+                            <ul style="font-size: 0.85em; text-align: left;">
+                                <li class="fragment fade-right" data-fragment-index="11">🤖 AI-powered lending platform</li>
+                                <li class="fragment fade-right" data-fragment-index="12">⛓️ Blockchain settlements</li>
+                                <li class="fragment fade-right" data-fragment-index="13">📱 Mobile app v3.0 launch</li>
+                                <li class="fragment fade-right" data-fragment-index="14">🌍 International expansion</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fragment fade-up" data-fragment-index="15" style="margin-top: 2em;">
+                    <div class="fragment grow" data-fragment-index="16" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 15px;">
+                        <p style="margin: 0; font-size: 1.3em; color: white;">
+                            Expected Annual Growth: <strong class="fragment highlight-current-green" data-fragment-index="17">20-25%</strong>
+                        </p>
+                    </div>
+                </div>
+                
                 <aside class="notes">
-                    Q4 targets are ambitious but achievable.
-                    AI lending platform launches in December.
-                    Blockchain pilot already showing 40% faster settlements.
+                    Two-column grid appears with zoom-in effect.
+                    Each column has different colored border for visual distinction.
+                    Headers highlight when explaining each section.
+                    Individual targets and initiatives appear from right.
+                    Final growth projection in gradient box grows for emphasis.
+                    Growth percentage highlights in green to show confidence.
                 </aside>
             </section>
 
-            <!-- Slide 10: Thank You -->
+            <!-- Slide 11: Thank You with Sequential Animations -->
             <section>
-                <h1>Thank You</h1>
-                <h3>Questions & Discussion</h3>
-                <p style="margin-top: 2em;">
-                    <strong>Contact Information</strong><br>
-                    Email: 24ds3000019@ds.study.iitm.ac.in<br>
-                    Presentation URL: <span style="color: #42affa;">https://[USER].github.io/[REPO]/</span>
-                </p>
-                <p style="margin-top: 1.5em; font-size: 0.7em; color: #888;">
-                    Use arrow keys to navigate • Press 'S' for speaker notes • Press 'F' for fullscreen
-                </p>
+                <h1 class="fragment zoom-in" data-fragment-index="1">Thank You</h1>
+                <h3 class="fragment fade-up" data-fragment-index="2">Questions & Discussion</h3>
+                
+                <div class="fragment fade-in" data-fragment-index="3" style="margin-top: 2em; background: rgba(66, 175, 250, 0.1); padding: 30px; border-radius: 15px;">
+                    <p><strong>Contact Information</strong></p>
+                    <p class="fragment highlight-blue" data-fragment-index="4">Email: 24ds3000019@ds.study.iitm.ac.in</p>
+                    <p class="fragment fade-up" data-fragment-index="5">
+                        Presentation URL:<br>
+                        <span style="color: #42affa; font-family: monospace;">
+                            https://udayprattap.github.io/tds-earnings-presentation/
+                        </span>
+                    </p>
+                </div>
+                
+                <div class="fragment fade-up" data-fragment-index="6" style="margin-top: 1.5em;">
+                    <div style="display: flex; justify-content: center; gap: 30px; font-size: 0.7em;">
+                        <span class="fragment zoom-in" data-fragment-index="7">⌨️ Arrow keys to navigate</span>
+                        <span class="fragment zoom-in" data-fragment-index="8">🎤 Press 'S' for speaker notes</span>
+                        <span class="fragment zoom-in" data-fragment-index="9">🖥️ Press 'F' for fullscreen</span>
+                    </div>
+                </div>
+                
                 <aside class="notes">
-                    Open floor for questions.
-                    Be prepared to discuss digital strategy in detail.
-                    Have backup slides ready with detailed financials.
+                    Thank you message zooms in.
+                    Contact box fades in with staged content reveal.
+                    Email highlights in blue.
+                    URL appears with fade-up.
+                    Navigation instructions zoom in one by one.
+                    Open floor for questions - be prepared for detailed discussions.
                 </aside>
             </section>
 
@@ -271,7 +467,13 @@ function updateDashboard(revenue, transactions) {
             progress: true,
             center: true,
             slideNumber: 'c/t',
+            fragmentInURL: true,
             plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+        });
+        
+        // Custom fragment animation event
+        Reveal.on('fragmentshown', function(event) {
+            console.log('Fragment shown:', event.fragment);
         });
     </script>
 </body>
